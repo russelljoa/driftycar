@@ -1,3 +1,4 @@
+//class for the obstacles in the game (the gate)
 class Gate {
   float x, y;
   int difficulty;
@@ -10,7 +11,8 @@ class Gate {
   boolean passed = false;
   
   
-  
+  //constructor for the gate object
+
   Gate(int difficulty) {
     this.difficulty = difficulty;
     gapstart = (int)random(0, start - (difficulty));
@@ -20,6 +22,7 @@ class Gate {
     
   }
 
+  //displays a gate object
   void display() {
     fill(0);
     rectMode(CORNER);
@@ -31,10 +34,12 @@ class Gate {
     text(gapstart, x, gapstart); 
   }
   
+  //refreshes the gate object
   void update(float speedRate) {
     y += speedRate;
   }
   
+  //returns collision status based on the gates
   boolean checkCollision(float x, float y){
     
     if ((x-20 < gapstart || x + 20 > gapstart + difficulty) == true && (y + 20  > this.y && y-20 < this.y + thickness)){

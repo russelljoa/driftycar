@@ -1,7 +1,9 @@
+//class for the rubber marks from drifting
 class Rubber {
   float carX, carY, x, y, angle, angleChange, speed;
   int opacity = 0;
   
+  //constructor for the rubber object
   Rubber(float carX, float carY, float x, float y, float angle, float angleChange, float speed) {
     this.x = x;
     this.y = y;
@@ -12,6 +14,7 @@ class Rubber {
     this.speed = speed;
   }
 
+  //displays the rubber marks
   void display(float speedRate) {
     
     pushMatrix();
@@ -28,7 +31,6 @@ class Rubber {
     noStroke();
     
     ellipse(x, y, 12, 12);
-    //tint(255,255,255,255);
     popMatrix();
   }
 }

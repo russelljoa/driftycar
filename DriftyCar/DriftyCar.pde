@@ -138,7 +138,6 @@ void draw() {
       fill (0);
 
       if (tireMarks.size() > 500) {
-        //for (int i=0; i < tireMarks.size()-250; i++){} REMOVE TIREMARKS PAST 250 BUT ITS CLUNKY
         tireMarks.remove(0);
         tireMarks.remove(0);
       }
@@ -178,7 +177,7 @@ void draw() {
         textSize(20);
         fill(0);
         text(
-          //"(" + (int)(x-(height/2)) + ", " + (int)(-y+(height/2)) +")"
+
           "Score: " + score +"\n" +
           "Drift Score: " + (int) driftScore +"\n" +
           "Collisions: " + inRed + inGreen + inPink + inBlue +"\n" +
@@ -387,7 +386,6 @@ void draw() {
 
       rectMode(CENTER);
       fill(255, 50, 50);
-      //rect(5,-10, 5, 3);
 
       popMatrix();
 
